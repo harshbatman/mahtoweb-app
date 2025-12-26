@@ -674,6 +674,117 @@ body {
 }
 
 /* ==========================================
+   COMPARISON SECTION (Why Choose MAHTO?)
+   ========================================== */
+
+.comparison-section {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-bg-dark);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.comparison-card {
+    position: relative;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+}
+
+.comparison-card.old-way {
+    border-color: rgba(255, 58, 68, 0.3);
+}
+
+.comparison-card.mahto-way {
+    border-color: var(--color-primary);
+    background: linear-gradient(135deg, rgba(138, 92, 246, 0.05) 0%, rgba(0, 191, 255, 0.05) 100%);
+}
+
+.comparison-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -12px;
+    right: var(--spacing-lg);
+    padding: 0.375rem 0.875rem;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(138, 92, 246, 0.4);
+}
+
+.comparison-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-emoji {
+    font-size: 2.5rem;
+}
+
+.comparison-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.comparison-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.comparison-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: 0.625rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.comparison-list li:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.comparison-list li .icon {
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.comparison-list li span:last-child {
+    flex: 1;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.comparison-list li.positive .icon {
+    color: #00F076;
+}
+
+.comparison-list li.negative .icon {
+    color: #FF3A44;
+}
+
+/* ==========================================
    ECOSYSTEM SECTION
    ========================================== */
 
@@ -1558,6 +1669,10 @@ body {
     }
 
     .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
         grid-template-columns: 1fr;
     }
 
