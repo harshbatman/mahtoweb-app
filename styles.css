@@ -603,7 +603,6 @@ body {
     height: auto;
     display: block;
     max-height: 500px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
     transition: transform 0.5s ease;
 }
 
