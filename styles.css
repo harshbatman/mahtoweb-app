@@ -1007,6 +1007,21 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
+.comparison-icon.store-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-icon.store-icons svg {
+    transition: transform var(--transition-base);
+}
+
+.comparison-icon.store-icons svg:hover {
+    transform: scale(1.15);
+}
+
 .comparison-item h4 {
     font-family: var(--font-display);
     font-size: 1.5rem;
