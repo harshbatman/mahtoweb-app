@@ -589,6 +589,40 @@ body {
     background: var(--color-border);
 }
 
+/* Hero Image Mockup */
+.hero-image-container {
+    position: relative;
+    margin-top: var(--spacing-3xl);
+    animation: slideUp 1s ease-out 1s both;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-mockup-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease;
+}
+
+.hero-mockup-image:hover {
+    transform: scale(1.02);
+}
+
+.hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(138, 92, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* ==========================================
    PROBLEM SECTION
    ========================================== */
