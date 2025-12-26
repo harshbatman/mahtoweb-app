@@ -604,7 +604,6 @@ body {
     display: block;
     max-height: 500px;
     transition: transform 0.5s ease;
-    mix-blend-mode: lighten;
 }
 
 .hero-mockup-image:hover {
