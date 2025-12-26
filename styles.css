@@ -813,6 +813,128 @@ body {
 }
 
 /* ==========================================
+   THE MAHTO JOURNEY SECTION
+   ========================================== */
+
+.journey-section {
+    padding: var(--spacing-3xl) 0;
+    background: var(--color-bg-darker);
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.journey-vertical-timeline {
+    max-width: 700px;
+    margin: var(--spacing-3xl) auto 0;
+    position: relative;
+}
+
+.journey-step {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+    position: relative;
+}
+
+.journey-icon {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 0 0 12px rgba(138, 92, 246, 0.15);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.icon-circle::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: var(--color-bg-card);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.journey-step:hover .icon-circle {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 16px rgba(138, 92, 246, 0.25), var(--shadow-glow);
+}
+
+.journey-content {
+    flex: 1;
+    padding: var(--spacing-md) 0;
+}
+
+.journey-phase {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.journey-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.journey-content p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    font-size: 1.0625rem;
+}
+
+.journey-connector {
+    width: 3px;
+    height: 80px;
+    background: linear-gradient(to bottom,
+            var(--color-primary) 0%,
+            var(--color-secondary) 50%,
+            var(--color-primary) 100%);
+    margin-left: 38.5px;
+    position: relative;
+    animation: flowDown 3s ease-in-out infinite;
+}
+
+@keyframes flowDown {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
    VISION SECTION
    ========================================== */
 
