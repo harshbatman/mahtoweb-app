@@ -1674,6 +1674,50 @@ body {
     transform: translateY(-3px);
 }
 
+.footer-contact-info {
+    margin-top: var(--spacing-xl);
+    text-align: center;
+    width: 100%;
+}
+
+.footer-contact-info h3 {
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.contact-email-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9375rem;
+}
+
+.contact-label {
+    color: var(--color-text-secondary);
+}
+
+.contact-email {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.contact-email:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
 .footer-column h4 {
     font-size: 1rem;
     font-weight: 700;
