@@ -1805,38 +1805,141 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Navigation & Layout */
+    .container {
+        padding: 0 var(--spacing-md);
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .nav-content {
+        flex-wrap: wrap;
+        padding: var(--spacing-sm) 0;
+    }
+
     .nav-links {
         display: none;
+        width: 100%;
+        flex-direction: column;
+        background: var(--color-bg-darker);
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-md);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--color-border);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .mobile-menu-toggle {
         display: flex;
+        margin-left: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .hero-content {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 10vw, 3rem); /* Scale down large text */
+        line-height: 1.1;
+    }
+
+    .hero-subtitle, .vision-lead {
+        font-size: 1rem;
     }
 
     .hero-stats {
         flex-direction: column;
         gap: var(--spacing-md);
+        padding: var(--spacing-md);
+        width: 100%;
     }
 
     .stat-divider {
-        width: 40px;
+        width: 100px;
         height: 1px;
+        background: var(--color-border);
     }
 
-    .ecosystem-grid {
-        grid-template-columns: 1fr;
+    .app-store-links,
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+        width: 100%;
     }
 
-    .comparison-grid {
-        grid-template-columns: 1fr;
+    .store-badge,
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+        max-width: 100%;
     }
 
-    .audience-grid {
-        grid-template-columns: 1fr;
+    .btn-hero-secondary {
+        margin-top: 0;
     }
 
-    .footer-content {
+    /* General Layout Transformation: Horizontal -> Vertical */
+    .ecosystem-grid,
+    .comparison-grid,
+    .audience-grid,
+    .footer-content,
+    .problem-grid,
+    .vision-comparison,
+    .visition-features, 
+    .cta-buttons,
+    .contact-cards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .journey-vertical-timeline {
+        margin-top: var(--spacing-xl);
+    }
+
+    .journey-step {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .journey-connector {
+        display: none; /* Hide connector in mobile if stacking vertically without spacing issues */
+    }
+
+    /* Comparison Section Specifics */
+    .comparison-header {
+        flex-direction: row; /* Keep emoji and title adjacent */
+        text-align: left;
+        align-items: center;
+    }
+
+    /* Mission Section */
+    .mission-content {
         grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-visual {
+        margin-bottom: var(--spacing-lg);
     }
 
     .mission-circle {
@@ -1847,18 +1950,44 @@ body {
     .mission-icon {
         font-size: 4rem;
     }
-}
 
-@media (max-width: 480px) {
-    .hero-cta {
-        flex-direction: column;
-        align-items: stretch;
+    /* Fluidity & Images */
+    img, 
+    svg, 
+    video, 
+    canvas, 
+    audio, 
+    iframe, 
+    embed, 
+    object {
+        max-width: 100%;
+        height: auto;
     }
 
-    .btn-hero-primary,
-    .btn-hero-secondary {
+    .hero-mockup-image {
+        max-height: 40vh; /* Prevent it from taking over the screen */
+    }
+
+    /* Typography Safety */
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word; /* Prevent overflow */
+        max-width: 100%;
+        hyphens: auto;
+    }
+
+    .section-title, .mission-title {
+        font-size: 1.75rem;
+    }
+
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .contact-card {
         width: 100%;
-        justify-content: center;
+        min-width: auto;
     }
 
     .cta-buttons {
