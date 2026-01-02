@@ -1668,10 +1668,36 @@ body {
 }
 
 .social-link:hover {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: white;
     transform: translateY(-3px);
+}
+
+/* Social Brand Colors */
+.social-link[aria-label="X (formerly Twitter)"]:hover {
+    background-color: #000000;
+    border-color: #333333;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.social-link[aria-label="LinkedIn"]:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.4);
+}
+
+.social-link[aria-label="Instagram"]:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 4px 12px rgba(214, 36, 159, 0.4);
+}
+
+.social-link[aria-label="YouTube"]:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
 }
 
 .footer-contact-info {
