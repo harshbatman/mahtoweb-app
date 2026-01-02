@@ -60,7 +60,7 @@ This site is deployed on [Vercel](https://vercel.com) for optimal performance an
 
 ## 📄 License
 
-© 2025 MAHTO. All rights reserved.
+© 2023 MAHTO. All rights reserved.
 
 ---
 
