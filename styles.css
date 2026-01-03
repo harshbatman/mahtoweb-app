@@ -1648,6 +1648,13 @@ body {
     font-size: 0.9375rem;
 }
 
+.social-title {
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
 .footer-social {
     display: flex;
     justify-content: center;
