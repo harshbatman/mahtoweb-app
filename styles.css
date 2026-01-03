@@ -1679,6 +1679,13 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+.social-link[aria-label="Reddit"]:hover {
+    background-color: #FF4500;
+    border-color: #FF4500;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.4);
+}
+
 .social-link[aria-label="LinkedIn"]:hover {
     background-color: #0077b5;
     border-color: #0077b5;
@@ -1831,6 +1838,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     /* Navigation & Layout */
     .container {
         padding: 0 var(--spacing-md);
@@ -1880,11 +1888,13 @@ body {
     }
 
     .hero-title {
-        font-size: clamp(2rem, 10vw, 3rem); /* Scale down large text */
+        font-size: clamp(2rem, 10vw, 3rem);
+        /* Scale down large text */
         line-height: 1.1;
     }
 
-    .hero-subtitle, .vision-lead {
+    .hero-subtitle,
+    .vision-lead {
         font-size: 1rem;
     }
 
@@ -1928,7 +1938,7 @@ body {
     .footer-content,
     .problem-grid,
     .vision-comparison,
-    .visition-features, 
+    .visition-features,
     .cta-buttons,
     .contact-cards-grid {
         display: flex;
@@ -1946,12 +1956,14 @@ body {
     }
 
     .journey-connector {
-        display: none; /* Hide connector in mobile if stacking vertically without spacing issues */
+        display: none;
+        /* Hide connector in mobile if stacking vertically without spacing issues */
     }
 
     /* Comparison Section Specifics */
     .comparison-header {
-        flex-direction: row; /* Keep emoji and title adjacent */
+        flex-direction: row;
+        /* Keep emoji and title adjacent */
         text-align: left;
         align-items: center;
     }
@@ -1978,30 +1990,38 @@ body {
     }
 
     /* Fluidity & Images */
-    img, 
-    svg, 
-    video, 
-    canvas, 
-    audio, 
-    iframe, 
-    embed, 
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
     object {
         max-width: 100%;
         height: auto;
     }
 
     .hero-mockup-image {
-        max-height: 40vh; /* Prevent it from taking over the screen */
+        max-height: 40vh;
+        /* Prevent it from taking over the screen */
     }
 
     /* Typography Safety */
-    h1, h2, h3, h4, h5, h6 {
-        word-wrap: break-word; /* Prevent overflow */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        word-wrap: break-word;
+        /* Prevent overflow */
         max-width: 100%;
         hyphens: auto;
     }
 
-    .section-title, .mission-title {
+    .section-title,
+    .mission-title {
         font-size: 1.75rem;
     }
 
