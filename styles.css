@@ -518,44 +518,7 @@ body {
     stroke: rgba(255, 255, 255, 0.8);
 }
 
-/* Platform Statistics */
-.platform-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-3xl);
-    animation: slideUp 0.8s ease-out 0.8s both;
-    flex-wrap: wrap;
-}
 
-.platform-stat-item {
-    text-align: center;
-}
-
-.platform-stat-number {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-.platform-stat-label {
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-    font-weight: 500;
-}
-
-.platform-stat-divider {
-    width: 1px;
-    height: 40px;
-    background: var(--color-border);
-}
 
 .hero-stats {
     display: flex;
