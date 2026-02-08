@@ -117,24 +117,28 @@ body {
 
 .logo {
     display: flex;
-    flex-direction: column;
-    gap: 0.125rem;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
 }
 
 .logo-text {
     font-family: var(--font-display);
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
+    line-height: 1;
 }
 
 .logo-tagline {
-    font-size: 0.625rem;
+    font-size: clamp(0.6rem, 1.2vw, 0.875rem);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
     font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -1556,6 +1560,10 @@ body {
 }
 
 .footer-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
     margin-bottom: var(--spacing-md);
 }
 
