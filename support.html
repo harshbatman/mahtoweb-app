@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - MAHTO</title>
+    <meta name="description"
+        content="Get help and support for MAHTO. Find answers to common questions about our ecosystem for homeowners, contractors, and workers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .support-hero {
+            padding: 160px 0 80px;
+            background: var(--gradient-hero);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .faq-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-bg-dark);
+        }
+
+        .faq-grid {
+            margin-top: var(--spacing-2xl);
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .faq-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            transition: all var(--transition-base);
+        }
+
+        .faq-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-sm);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        .contact-methods {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-bg-darker);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .method-card {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            border: 1px solid var(--color-border);
+            transition: all var(--transition-base);
+        }
+
+        .method-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+
+        .method-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(15, 82, 186, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-lg);
+            font-size: 24px;
+            color: var(--color-primary);
+        }
+
+        .method-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .method-card p {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                    <span class="logo-text">MAHTO</span>
+                    <span class="logo-tagline">Building Dreams</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#ecosystem" class="nav-link">Ecosystem</a>
+                    <a href="index.html#why-mahto" class="nav-link">Why Us</a>
+                    <a href="index.html#our-story" class="nav-link">Our Story</a>
+                    <a href="index.html#mission" class="nav-link">Mission</a>
+                    <a href="privacy.html" class="nav-link">Privacy</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <button class="btn-primary" onclick="window.location.href='index.html#contact'">Get Started</button>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Support Hero -->
+    <header class="support-hero">
+        <div class="container">
+            <div class="section-tag">Support Center</div>
+            <h1 class="hero-title">How can we <span class="gradient-text">help you?</span></h1>
+            <p class="hero-subtitle">Find answers to common questions or get in touch with our team.</p>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="support-container">
+            <h2 class="section-title" style="text-align: center;">Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-question"><span>❓</span> What is MAHTO?</div>
+                    <div class="faq-answer">MAHTO is a full-stack home building platform that connects homeowners,
+                        contractors, workers, and material shops into a single, unified ecosystem.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question"><span>❓</span> How do I start building my home?</div>
+                    <div class="faq-answer">You can start by downloading our app, posting your requirements, and
+                        connecting with verified contractors or using our 'Mine' services for end-to-end construction.
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question"><span>❓</span> Is the platform free for workers?</div>
+                    <div class="faq-answer">Yes, workers can join the platform, build their profiles, and find
+                        consistent daily work from contractors without any upfront fees.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question"><span>❓</span> How can I get a home loan through MAHTO?</div>
+                    <div class="faq-answer">Visit the MAHTO Home Loans section within our app or website to compare
+                        interest rates from various partners and get quick approvals.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-question"><span>❓</span> Are the properties on MAHTO verified?</div>
+                    <div class="faq-answer">Yes, MAHTO Land & Properties features verified listings with legal
+                        assistance to ensure a safe investment for your dream home.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Can't find what you're looking for? Our team is here to help.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="method-card">
+                    <div class="method-icon">📧</div>
+                    <h3>Customer Support</h3>
+                    <p>For general inquiries and platform usage help.</p>
+                    <a href="mailto:support@mahtoji.tech" class="btn-outline">Email Support</a>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">👔</div>
+                    <h3>CEO's Office</h3>
+                    <p>For strategic partnerships or escalated concerns.</p>
+                    <a href="mailto:harshkumarceo@mahtoji.tech" class="btn-outline">Contact CEO</a>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">🐦</div>
+                    <h3>Social Media</h3>
+                    <p>Reach out to us on X (Twitter) for quick updates.</p>
+                    <a href="https://x.com/mahtocompany" target="_blank" rel="noopener noreferrer"
+                        class="btn-outline">Tweet Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">MAHTO</span>
+                        <span class="logo-tagline">Building Dreams</span>
+                    </div>
+                    <p class="footer-description">
+                        The operating system for home building. One unified ecosystem for homeowners, contractors,
+                        workers and Shopowner.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MAHTO. All rights reserved.
+                    <a href="privacy.html" style="color: inherit; margin-left: 10px;">Privacy Policy</a>.
+                    <a href="support.html" style="color: inherit; margin-left: 10px;">Support</a>.
+                    Built with <span class="heart-beat">❤️</span> for everyone
+                    who dreams of owning a home.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
