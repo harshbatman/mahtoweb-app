@@ -14,90 +14,79 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .privacy-content-section {
-            padding: var(--spacing-3xl) 0;
-            background: var(--color-bg-dark);
-            min-height: 60vh;
+        .privacy-intro-section {
+            padding: 180px 0 100px;
+            background: var(--gradient-hero);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .privacy-card {
+        .privacy-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--color-bg-dark);
+        }
+
+        .privacy-section.alt {
+            background: var(--color-bg-darker);
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .policy-card {
+            padding: var(--spacing-xl);
             background: var(--color-bg-card);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-xl);
-            padding: var(--spacing-2xl);
-            box-shadow: var(--shadow-md);
-            max-width: 900px;
-            margin: 0 auto;
+            transition: all var(--transition-base);
         }
 
-        .privacy-card h2 {
+        .policy-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .policy-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .policy-card h3 {
             font-family: var(--font-display);
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
-            color: var(--color-text-primary);
-        }
-
-        .privacy-card p {
-            color: var(--color-text-secondary);
-            margin-bottom: var(--spacing-md);
-            line-height: 1.8;
-            font-size: 1.0625rem;
-        }
-
-        .privacy-card ul {
-            list-style: none;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .privacy-card ul li {
-            position: relative;
-            padding-left: 1.75rem;
             margin-bottom: var(--spacing-sm);
-            color: var(--color-text-secondary);
-            line-height: 1.6;
         }
 
-        .privacy-card ul li::before {
+        .policy-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        .policy-list {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+
+        .policy-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-secondary);
+        }
+
+        .policy-list li::before {
             content: '→';
             position: absolute;
             left: 0;
             color: var(--color-primary);
             font-weight: 700;
-        }
-
-        .last-updated {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(15, 82, 186, 0.05);
-            border-radius: 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .hero-mini {
-            position: relative;
-            padding: 160px 0 80px;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .hero-mini .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-            background: var(--gradient-hero);
-        }
-
-        .hero-mini-content {
-            position: relative;
-            z-index: 1;
         }
 
         .back-link {
@@ -113,6 +102,18 @@
 
         .back-link:hover {
             transform: translateX(-5px);
+        }
+
+        .last-updated-tag {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(15, 82, 186, 0.1);
+            border: 1px solid rgba(15, 82, 186, 0.2);
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-top: var(--spacing-lg);
         }
     </style>
 </head>
@@ -147,67 +148,125 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="hero-mini">
+    <!-- Header Section -->
+    <header class="privacy-intro-section">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1 class="hero-title">Privacy <span class="gradient-text">Matters</span></h1>
+            <p class="hero-subtitle">We believe transparency is the foundation of every building project.</p>
+            <div class="last-updated-tag">Version: February 09, 2026</div>
+        </div>
         <div class="hero-background">
             <div class="gradient-orb orb-1"></div>
             <div class="gradient-orb orb-2"></div>
         </div>
-        <div class="container">
-            <div class="hero-mini-content">
-                <a href="index.html" class="back-link">← Back to Home</a>
-                <h1 class="section-title">Privacy <span class="gradient-text">Policy</span></h1>
-                <p class="section-subtitle">How we protect your data and privacy in the MAHTO ecosystem.</p>
-            </div>
-        </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="privacy-content-section">
+    <!-- Section 1: Data Collection -->
+    <section class="privacy-section">
         <div class="container">
-            <div class="privacy-card">
-                <div class="last-updated">Last Updated: February 09, 2026</div>
+            <div class="section-header">
+                <div class="section-tag">Information</div>
+                <h2 class="section-title">What We Collect</h2>
+                <p class="section-subtitle">To provide a seamless home building journey, we only collect what's
+                    essential.</p>
+            </div>
+            <div class="privacy-grid">
+                <div class="policy-card">
+                    <div class="policy-icon">👤</div>
+                    <h3>Identification</h3>
+                    <p>Standard profile details to identify you within the ecosystem.</p>
+                    <ul class="policy-list">
+                        <li>Name & Phone</li>
+                        <li>Account Credentials</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <div class="policy-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Precise location data to connect you with nearby services.</p>
+                    <ul class="policy-list">
+                        <li>Local Contractors</li>
+                        <li>Nearby material shops</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <div class="policy-icon">📸</div>
+                    <h3>Media Access</h3>
+                    <p>Access to camera and gallery for project documentation.</p>
+                    <ul class="policy-list">
+                        <li>Profile pictures</li>
+                        <li>Site photos & uploads</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <p>Welcome to MAHTO. We value your privacy and are committed to protecting your personal data. This
-                    Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile
-                    application and services.</p>
+    <!-- Section 2: Data Usage -->
+    <section class="privacy-section alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Usage</div>
+                <h2 class="section-title">How Your Data is Used</h2>
+                <p class="section-subtitle">We use your information to power the home building operating system.</p>
+            </div>
+            <div class="privacy-grid">
+                <div class="policy-card">
+                    <div class="policy-icon">🔗</div>
+                    <h3>Connectivity</h3>
+                    <p>Powering the matching engine between homeowners and workers.</p>
+                </div>
+                <div class="policy-card">
+                    <div class="policy-icon">🗺️</div>
+                    <h3>Localization</h3>
+                    <p>Ensuring your search results are relevant to your construction site.</p>
+                </div>
+                <div class="policy-card">
+                    <div class="policy-icon">💬</div>
+                    <h3>Communication</h3>
+                    <p>Facilitating seamless negotiation and coordination between parties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h2>1. Information We Collect</h2>
-                <p>To provide a high-quality ecosystem for home building, we collect the following types of information:
-                </p>
-                <ul>
-                    <li><strong>Personal Identification:</strong> Name, phone number, and account credentials.</li>
-                    <li><strong>Location Data:</strong> We request access to your precise location to show you nearby
-                        contractors, workers, and shops.</li>
-                    <li><strong>Camera & Media:</strong> We request access to your camera and gallery to allow you to
-                        upload profile pictures and project images.</li>
-                    <li><strong>Usage Data:</strong> Information about how you interact with our platform (e.g., job
-                        postings, searches).</li>
-                </ul>
+    <!-- Section 3: Sharing & Security -->
+    <section class="privacy-section">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-visual">
+                    <div class="mission-circle" style="animation: none;">
+                        <div class="mission-icon">🛡️</div>
+                    </div>
+                </div>
+                <div class="mission-text">
+                    <div class="section-tag">Security</div>
+                    <h2 class="mission-title">Industry-Standard Protection</h2>
+                    <p class="mission-description">
+                        We do not sell your personal data. Your information is shared only with other users
+                        of the MAHTO platform as necessary to facilitate home building projects.
+                    </p>
+                    <div class="mission-vision">
+                        <div class="vision-icon">🔒</div>
+                        <div>
+                            <h4>Top-tier Encryption</h4>
+                            <p>We implement robust security measures to protect your data from unauthorized access,
+                                ensuring your private details stay private.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h2>2. How We Use Your Information</h2>
-                <p>We use your data to:</p>
-                <ul>
-                    <li>Connect homeowners with skilled contractors and workers.</li>
-                    <li>Provide localized search results based on your current position.</li>
-                    <li>Facilitate communication between users in the ecosystem.</li>
-                    <li>Improve and secure our platform features.</li>
-                </ul>
-
-                <h2>3. Data Sharing and Security</h2>
-                <p>We do not sell your personal data to third parties. Your information is shared only with other users
-                    of the MAHTO platform as necessary to facilitate home building projects (e.g., sharing a
-                    contractor's profile with a homeowner). We implement industry-standard security measures to protect
-                    your data from unauthorized access.</p>
-
-                <h2>4. Your Controls</h2>
-                <p>You can manage your data through your profile settings within the app. You may revoke location or
-                    camera permissions at any time through your device settings, although some features may no longer
-                    function properly.</p>
-
-                <h2>5. Contact Us</h2>
-                <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-                <div class="contact-cards-grid" style="margin-top: var(--spacing-lg); justify-content: flex-start;">
+    <!-- Section 4: Contact -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Have Questions?</h2>
+                <p class="cta-subtitle">Our team is here to help you understand your rights and our policies.</p>
+                <div class="contact-cards-grid" style="justify-content: center;">
                     <a href="mailto:support@mahtoji.tech" class="contact-card">
                         <div class="contact-card-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -218,11 +277,10 @@
                             </svg>
                         </div>
                         <div class="contact-card-content">
-                            <span class="contact-card-label">Help and Support</span>
+                            <span class="contact-card-label">Support</span>
                             <span class="contact-card-value">support@mahtoji.tech</span>
                         </div>
                     </a>
-
                     <a href="mailto:harshkumarceo@mahtoji.tech" class="contact-card">
                         <div class="contact-card-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -239,75 +297,74 @@
                 </div>
             </div>
         </div>
-    </section>
+        </header>
 
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-text">MAHTO</span>
-                        <span class="logo-tagline">Building Dreams</span>
-                    </div>
-                    <p class="footer-description">
-                        The operating system for home building. One unified ecosystem for homeowners, contractors,
-                        workers and Shopowner.
-                    </p>
-                    <h3 class="social-title">Follow Us</h3>
-                    <div class="footer-social">
-                        <a href="https://x.com/mahtocompany" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="X (formerly Twitter)">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.reddit.com/r/mahto/" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="Reddit">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/mahtobuilds/" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                                <circle cx="4" cy="4" r="2" />
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/tech.mahto/" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="#000"
-                                    stroke-width="2" />
-                                <circle cx="17.5" cy="6.5" r="1.5" fill="#000" />
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@MAHTO-updates" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="YouTube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                            </svg>
-                        </a>
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-text">MAHTO</span>
+                            <span class="logo-tagline">Building Dreams</span>
+                        </div>
+                        <p class="footer-description">
+                            The operating system for home building. One unified ecosystem for homeowners, contractors,
+                            workers and Shopowner.
+                        </p>
+                        <h3 class="social-title">Follow Us</h3>
+                        <div class="footer-social">
+                            <a href="https://x.com/mahtocompany" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="X (formerly Twitter)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.reddit.com/r/mahto/" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="Reddit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/mahtobuilds/" target="_blank"
+                                rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/tech.mahto/" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="#000"
+                                        stroke-width="2" />
+                                    <circle cx="17.5" cy="6.5" r="1.5" fill="#000" />
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@MAHTO-updates" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="YouTube">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 MAHTO. All rights reserved. <a href="privacy.html"
+                            style="color: inherit; margin-left: 10px;">Privacy Policy</a>. Built with <span
+                            class="heart-beat">❤️</span> for everyone
+                        who dreams of owning a home.</p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 MAHTO. All rights reserved. <a href="privacy.html"
-                        style="color: inherit; margin-left: 10px;">Privacy Policy</a>. Built with <span
-                        class="heart-beat">❤️</span> for everyone
-                    who dreams of owning a home.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
-
